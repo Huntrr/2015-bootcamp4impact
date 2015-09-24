@@ -2,19 +2,50 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
     <title>{{ name }}</title>
     
+    <link rel="stylesheet" href="{{ url_for('static', filename='semantic/semantic.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <script src="{{ url_for('static', filename='semantic/semantic.min.js') }}"></script>
+
     <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFhn985TSdmqGS8CLeFQX7N-LylRDJUuc">
-    </script>
-   <script type="text/javascript" src="{{ url_for('static', filename='gmaps.js') }}"></script>
-   <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
-    </head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFhn985TSdmqGS8CLeFQX7N-LylRDJUuc"> </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='gmaps.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+  </head>
   <body>
-    <h1>It's like...</h1>
-    <h2>{{ name }}</h2>
-    <div id="map"></div>
+  <div class="ui large fixed inverted menu">
+    <div class="ui container">
+      <div class="header item">
+        <i class="anchor icon"></i>
+        {{ name }}
+      </div>
+     
+      <div class="ui right item">
+        <a href="http://hack4impact.org">not a hack4impact thing</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui main text container">
+    <div class="ui container">
+      <h1 class="header">Arrrrg, matey!</h1>
+      <div id="map" class="ui segment"> </div>
+    </div>
+  </div>
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      <div class="ui horizontal inverted small link list">
+        <div class="item">Copyright &copy; 1692 Sally Kong & Hunter Lightman</div>
+      </div>
+    </div>
+  </div>
+
+
+
 
     {# ESTABLISH coordinates VARIABLE #}
     {% if coordinates %}

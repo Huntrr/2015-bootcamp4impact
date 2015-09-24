@@ -5,7 +5,7 @@ from models import Coordinate
 
 @app.route('/', methods=['GET'])
 def index():
-    name = 'Tinder for Treasure'
+    name = 'tinder4treasure'
     coordinates = Coordinate.query.all()
     return render_template('home.html', name=name,
                            coordinates=json.dumps(
