@@ -1,8 +1,8 @@
 $(function() {
  var map = new GMaps({
     div: '#map',
-    lat: 1.1,
-    lng: 2.2
+    lat: coordinates[0]? coordinates[0].latitude : 0,
+    lng: coordinates[0]? coordinates[0].longitude : 0
  });
 
  for (var i = 0; i < coordinates.length; i++) {
