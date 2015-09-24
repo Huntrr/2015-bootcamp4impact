@@ -6,11 +6,12 @@
 
     <title>{{ name }}</title>
     
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='semantic/semantic.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
     <script src="{{ url_for('static', filename='semantic/semantic.min.js') }}"></script>
 
-    <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFhn985TSdmqGS8CLeFQX7N-LylRDJUuc"> </script>
     <script type="text/javascript" src="{{ url_for('static', filename='gmaps.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
