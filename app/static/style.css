@@ -5,6 +5,10 @@
 body {
   background-color: #FFFFFF;
 }
+.ui.menu {
+  border-radius: 0;
+}
+
 .ui.main.container {
   padding-top: 1em;
 }
@@ -13,4 +17,13 @@ body {
   position: fixed;
   bottom: 0px; 
   width: 100%;
+}
+
+@media(max-height: 580px) {
+  h1 {
+    display: none;
+  }
+  .ui.main.container {
+    padding-top: 0;
+  }
 }
